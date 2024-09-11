@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Voz</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <button onclick="showPage('text-to-speech')">Texto a Voz</button>
+        <button onclick="showPage('voice-recognition')">Reconocimiento de Voz</button>
+        <button onclick="showPage('voice-assistant')">Asistente de Voz</button>
+    </div>
+    <div class="slider">
+        <div id="text-to-speech" class="page">
+            <h1>Texto a Voz</h1>
+            <textarea id="textInput" placeholder="Escribe aquí el texto"></textarea>
+            <button id="convertTextToSpeech">Convertir a Voz</button>
+        </div>
+        <div id="voice-recognition" class="page">
+            <h1>Reconocimiento de Voz</h1>
+            <p>Presiona el botón para activar el micrófono. Habla y el texto se mostrará aquí:</p>
+            <button id="toggleBtn">🎤 Activar Micrófono</button>
+            <div id="recognized-text"></div>
+        </div>
+        <div id="voice-assistant" class="page">
+            <h1>Asistente de Voz</h1>
+            <div id="conversation"></div>
+            <button id="recordBtn">🎤 Pulsar para hablar</button>
+            <p id="response"></p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
